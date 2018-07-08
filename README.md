@@ -33,7 +33,8 @@ Example usage:<br/>
 
 # Custom templates
 
-You can create the following files in `~/.config/cra-gen/templates/`:
+You can use your own templates to overwrite the builtin templates by adding the
+following files in `~/.config/cra-gen/templates/`:
 
 ```
 ~/.config/cra-gen/templates/
