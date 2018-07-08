@@ -1,0 +1,33 @@
+{
+  "name": "cra-gen",
+  "version": "0.0.1",
+  "description": "A CLI tool to generate new components, reducers, actions and more for a create-react-app project.",
+  "main": "src/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kkoomen/cra-gen.git"
+  },
+  "keywords": [
+    "cli",
+    "tool",
+    "generate",
+    "create-react-app",
+    "components",
+    "reducers",
+    "actions"
+  ],
+  "author": "Kim K",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkoomen/cra-gen/issues"
+  },
+  "homepage": "https://github.com/kkoomen/cra-gen#readme",
+  "dependencies": {
+    "commander": "^2.16.0",
+    "find-root": "^1.1.0",
+    "inquirer": "^6.0.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.2"
+  }
+}
