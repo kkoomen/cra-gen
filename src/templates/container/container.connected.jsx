@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class %NAME% extends Component {
   constructor(props: any) {
@@ -10,10 +11,14 @@ class %NAME% extends Component {
   render() {
     return (
       <div className="%NAME%">
-        Dummy component with state: %NAME%
+        Dummy connected container: %NAME%
       </div>
     );
   }
 }
 
-export default %NAME%;
+function mapStateToProps(state, ownProps) {
+  return {};
+};
+
+export default connect(mapStateToProps)(%NAME%);
