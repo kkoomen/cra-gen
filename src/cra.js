@@ -71,6 +71,7 @@ const generate = (type, name) => {
       // Create an empty file in the actions directory.
       const actionsFile = path.join(actionsDir, 'index.js');
       fs.closeSync(fs.openSync(actionsFile, 'w'));
+      console.log(`Successfully generated ${actionsFile}`);
       break;
     }
   }
