@@ -4,25 +4,36 @@ A command-line tool for generating components, reducers, containers easily using
 templates. The structure is based on my own react-redux boilerplate available
 [here](https://github.com/kkoomen/react-boilerplate).
 
+The goal here is to use a default, logical and general structure, used by
+everyone within the project. Preventing people suddenly using different
+structures when they feel to. Faster coding using generators and removing
+repetitive actions, such as making "yet another" component. This should be a
+quick action. Using the default templating will let everyone use a general way
+of defining a component.  This will bring more consistency into the project,
+along with general readability and structure for components.
+
 # Installation
 
 `npm install -g cra-gen`
 
 # Getting started
 
-Example usage:<br/>
-`$ cra-gen <type> <name>`
+Example usage:<br/> `$ cra-gen <type> <name>`
 
 # Available types:
 
-- `component`: Generates a regular component extending the `React.Component` class.
+- `component`: Generates a regular component extending the `React.Component`
+  class.
 - `component:stateless`: Generates a stateless component.
-- `component:connected`: Generates a regular component connected to the redux store.
+- `component:connected`: Generates a regular component connected to the redux
+  store.
 - `component:stateless:connected`: Generates a stateless component connected to
   the redux store.
-- `container`: Generates a regular container extending the `React.Component` class.
+- `container`: Generates a regular container extending the `React.Component`
+  class.
 - `container:stateless`: Generates a stateless container.
-- `container:connected`: Generates a regular container connected to the redux store.
+- `container:connected`: Generates a regular container connected to the redux
+  store.
 - `container:stateless:connected`: Generates a stateless container connected to
   the redux store.
 - `reducer`: Generates a reducer.

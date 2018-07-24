@@ -1,8 +1,11 @@
 {
   "name": "cra-gen",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A command-line tool to generate new components, reducers, actions and more for a create-react-app project.",
   "main": "src/index.js",
+  "bin": {
+    "cra-gen": "src/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/kkoomen/cra-gen.git"
