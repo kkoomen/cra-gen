@@ -55,6 +55,11 @@ following files in `~/.config/cra-gen/templates/`:
 Each file you add has the `%NAME%` variable available which is the name you pass
 through when generating.
 
+# Contributing
+
+Help from the community is always welcome! If you have improvements, feel free
+to fork this repository and submit a pull request!
+
 # License
 Copyright 2018 Kim Koomen.
 
