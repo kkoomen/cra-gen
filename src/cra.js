@@ -24,8 +24,8 @@ const generate = (type, name) => {
       destinationFile = path.join(destinationDir, 'index.jsx');
       formattedName = utils.capitalizeFirstLetter(path.basename(name));
 
-      const connected = types.indexOf(':connected') !== -1;
-      const stateless = types.indexOf(':stateless') !== -1;
+      const connected = types.indexOf('connected') !== -1;
+      const stateless = types.indexOf('stateless') !== -1;
       if (stateless && connected) {
         templatePath = utils.getTemplatePath('component.stateless.connected');
       } else if (connected) {
