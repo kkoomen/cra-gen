@@ -42,6 +42,15 @@ Example usage:<br/> `$ cra-gen <type> <name>`
   If you really want to use that, you have to make a component using e.g. the
   sytnax: `$ cra-gen component:stateless`.
 
+## Recursive
+
+Every type can be created nested as well. For example:
+
+`$ cra-gen component:stateless User/Profile`
+
+This will create recursively the path `src/components/User/Profile` if it
+doesn't exists and then add an index.jsx in that folder.
+
 # Custom templates
 
 You can use your own templates to overwrite the builtin templates by adding the

@@ -20,12 +20,12 @@ const generate = (type, name) => {
       break;
     }
     case 'component': {
-      destinationDir = path.join(rootDir, `src/components/${utils.capitalizeFirstLetter(name)}`);
+      destinationDir = path.join(rootDir, 'src/components/', utils.capitalizeFirstLetter(name));
       destinationFile = path.join(destinationDir, 'index.jsx');
-      formattedName = utils.capitalizeFirstLetter(name);
+      formattedName = utils.capitalizeFirstLetter(path.basename(name));
 
-      const connected = types.indexOf('connected') !== -1;
-      const stateless = types.indexOf('stateless') !== -1;
+      const connected = types.indexOf(':connected') !== -1;
+      const stateless = types.indexOf(':stateless') !== -1;
       if (stateless && connected) {
         templatePath = utils.getTemplatePath('component.stateless.connected');
       } else if (connected) {
@@ -38,9 +38,9 @@ const generate = (type, name) => {
       break;
     }
     case 'container': {
-      destinationDir = path.join(rootDir, `src/containers/${utils.capitalizeFirstLetter(name)}`);
+      destinationDir = path.join(rootDir, 'src/containers/', utils.capitalizeFirstLetter(name));
       destinationFile = path.join(destinationDir, 'index.jsx');
-      formattedName = utils.capitalizeFirstLetter(name);
+      formattedName = utils.capitalizeFirstLetter(path.basename(name));
 
       const connected = types.indexOf('connected') !== -1;
       const stateless = types.indexOf('stateless') !== -1;
@@ -56,16 +56,16 @@ const generate = (type, name) => {
       break;
     }
     case 'reducer': {
-      destinationDir = path.join(rootDir, `src/reducers/${utils.capitalizeFirstLetter(name)}`);
+      destinationDir = path.join(rootDir, 'src/reducers/', utils.capitalizeFirstLetter(name));
       destinationFile = path.join(destinationDir, 'index.jsx');
-      formattedName = utils.lowerCaseFirstLetter(name);
+      formattedName = utils.lowerCaseFirstLetter(path.basename(name));
       templatePath = utils.getTemplatePath('reducer');
 
       // When a reducer has been generated we also want to add a folder that
       // contains all its actions.
-      const actionsDir = path.join(rootDir, `src/actions/${utils.capitalizeFirstLetter(name)}`);
+      const actionsDir = path.join(rootDir, 'src/actions/', utils.capitalizeFirstLetter(name));
       if (!fs.existsSync(actionsDir)) {
-        fs.mkdirSync(actionsDir);
+        utils.mkdirSync(actionsDir);
       }
 
       // Create an empty file in the actions directory.
@@ -77,7 +77,7 @@ const generate = (type, name) => {
   }
 
   if (!fs.existsSync(destinationDir) && destinationDir) {
-    fs.mkdirSync(destinationDir);
+    utils.mkdirSync(destinationDir);
   }
 
   if (destinationFile) {
