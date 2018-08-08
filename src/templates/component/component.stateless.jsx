@@ -5,7 +5,7 @@ const %NAME% = (props) => {
     <div className="%NAME%">
       Dummy stateless component: %NAME%
     </div>
-  )
+  );
 };
 
 export default %NAME%;

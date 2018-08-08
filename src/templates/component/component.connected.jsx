@@ -19,6 +19,6 @@ class %NAME% extends Component {
 
 function mapStateToProps(state, ownProps) {
   return {};
-};
+}
 
 export default connect(mapStateToProps)(%NAME%);

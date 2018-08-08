@@ -6,11 +6,11 @@ const %NAME% = (props) => {
     <div className="%NAME%">
       Dummy stateless connected component: %NAME%
     </div>
-  )
+  );
 };
 
 function mapStateToProps(state, ownProps) {
   return {};
-};
+}
 
 export default connect(mapStateToProps)(%NAME%);
