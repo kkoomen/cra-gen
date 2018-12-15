@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class %NAME% extends Component {
-  constructor(props: any) {
+  constructor(props) {
     super(props);
 
     this.state = {};

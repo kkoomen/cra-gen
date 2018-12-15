@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class %NAME% extends Component {
-  constructor(props: any) {
+  constructor(props) {
     super(props);
 
     this.state = {};
